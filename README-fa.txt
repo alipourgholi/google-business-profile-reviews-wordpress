@@ -1,4 +1,4 @@
-# راهنمای Local Business Reviews 1.3.5
+# راهنمای Google Business Profile Reviews for WordPress 1.3.5
 
 افزونه وردپرس برای نمایش ریویوها، امتیاز، تعداد نظرات و اطلاعات گوگل بیزینس پروفایل؛ نوشتهٔ **علی پورقلی**.
 
@@ -17,8 +17,8 @@
 ۱. در GitHub گزینهٔ Code و سپس Download ZIP را بزنید و فایل را استخراج کنید.
 ۲. نام پوشهٔ استخراج‌شده را `local-business-reviews` بگذارید؛ فایل `local-business-reviews.php` باید مستقیم داخل آن باشد.
 ۳. پوشه را در `wp-content/plugins/` بارگذاری کنید؛ یا همان پوشه را ZIP کرده و از «افزونه‌ها ← افزودن ← بارگذاری افزونه» نصب کنید.
-۴. افزونهٔ Local Business Reviews by Ali Pourgholi را فعال کنید.
-۵. به Settings → Google Business Reviews بروید.
+۴. افزونهٔ Google Business Profile Reviews for WordPress را فعال کنید.
+۵. به Settings → Google Business Profile Reviews بروید.
 
 نیازی به npm یا Composer نیست. ابتدا روی سایت آزمایشی نصب کنید.
 
