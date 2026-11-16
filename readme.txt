@@ -1,4 +1,4 @@
-=== Local Business Reviews by Ali Pourgholi ===
+=== Google Business Profile Reviews for WordPress ===
 Contributors: alipourgholi
 Requires at least: 6.2
 Requires PHP: 7.4
@@ -10,7 +10,7 @@ Display an authorized Google Business Profile with recent reviews, Google rating
 
 == Installation ==
 1. Plugins > Add New > Upload Plugin. Upload local-business-reviews-1.3.5.zip, install and activate.
-2. Settings > Google Business Reviews. Use an approved Google Cloud project with GBP API access. Enable My Business Account Management API, My Business Business Information API and Google My Business API (v4 reviews).
+2. Settings > Google Business Profile Reviews. Use an approved Google Cloud project with GBP API access. Enable My Business Account Management API, My Business Business Information API and Google My Business API (v4 reviews).
 3. Configure Google Auth Platform branding, audience and Data Access (business.manage). Add the authorizing account as a test user if in Testing. Testing refresh tokens can expire after seven days; set an appropriate production publishing status and complete any verification Google requests before unattended production use. API approval and OAuth app verification are separate processes.
 4. Create an OAuth client of type Web application. Add EXACTLY the redirect URI shown in this plugin's settings. A Desktop client is unsuitable. Do not share one site's tokens with another site.
 5. Save Client ID and Client secret. Connect Google with the business owner/manager account; approve access. Load profiles, select the matching business and Sync now.
