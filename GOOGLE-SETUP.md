@@ -1,10 +1,10 @@
-# Google credentials setup — Local Business Reviews 1.3.5
+# Google credentials setup — Google Business Profile Reviews for WordPress 1.3.5
 
 This guide connects one authorized Google Business Profile to your WordPress installation. You need an **OAuth Client ID and Client Secret**, not a Google Maps API key. Never put real secrets, downloaded credential JSON files, or tokens in this public repository.
 
 ## 1. Prepare your accounts
 
-Use a Google account with owner or manager access to the Business Profile you want to display, and an administrator account on your WordPress site. Install and activate Local Business Reviews 1.3.5. Your site must support HTTPS and outgoing requests to Google.
+Use a Google account with owner or manager access to the Business Profile you want to display, and an administrator account on your WordPress site. Install and activate Google Business Profile Reviews for WordPress 1.3.5. Your site must support HTTPS and outgoing requests to Google.
 
 Google requires approval for Business Profile API access. Its current prerequisites include managing a verified profile active for at least 60 days and having a website representing that business. Check the [official prerequisites](https://developers.google.com/my-business/content/prereqs) before applying; approval is not automatic.
 
@@ -47,7 +47,7 @@ For a lasting production connection, complete Google's publishing and any applic
 
 ## 5. Copy your site's exact callback URL
 
-In WordPress, open **Settings → Google Business Reviews**. Under **Google Cloud credentials**, copy the value labeled **Exact authorized redirect URI**.
+In WordPress, open **Settings → Google Business Profile Reviews**. Under **Google Cloud credentials**, copy the value labeled **Exact authorized redirect URI**.
 
 Example only:
 
@@ -70,7 +70,7 @@ Do not create an API key, Desktop app credential, or service-account key for the
 
 ## 7. Connect WordPress and select the business
 
-1. Return to **Settings → Google Business Reviews**.
+1. Return to **Settings → Google Business Profile Reviews**.
 2. Paste the Client ID into **Client ID** and the secret into **Client secret**.
 3. Click **Save settings**. A blank secret field on later visits preserves the saved secret; it does not mean the secret is missing.
 4. Click **Connect Google** (or **Reconnect Google** for an existing connection).
