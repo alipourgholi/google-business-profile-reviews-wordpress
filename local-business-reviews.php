@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Local Business Reviews by Ali Pourgholi
+ * Plugin Name: Google Business Profile Reviews for WordPress
  * Description: Connect one authorized Google Business Profile per WordPress site and display its periodically updated rating, recent reviews and business information.
  * Version: 1.3.5
  * Author: Ali Pourgholi
@@ -91,7 +91,7 @@ final class AP_Local_Reviews {
         return isset($_POST[$name]) && is_string($_POST[$name]) ? wp_unslash($_POST[$name]) : '';
     }
     public static function menu() {
-        add_options_page('Google Business Reviews', 'Google Business Reviews', 'manage_options', 'ap-local-reviews', array(__CLASS__, 'page'));
+        add_options_page('Google Business Profile Reviews', 'Google Business Profile Reviews', 'manage_options', 'ap-local-reviews', array(__CLASS__, 'page'));
     }
     public static function assets() {
         // Local assets only; no external fonts or trackers.
@@ -100,7 +100,7 @@ final class AP_Local_Reviews {
     }
     public static function privacy() {
         if (function_exists('wp_add_privacy_policy_content')) {
-            wp_add_privacy_policy_content('Local Business Reviews', '<p>This website may display public reviews from its authorized Google Business Profile, including reviewer names, profile photos, review text, dates and business replies. The server connects to Google APIs using administrator-authorized OAuth. The plugin does not send visitor analytics to Google. Displayed photos may load from Google when the reviews become visible. Business and review data are refreshed periodically, cached locally for up to 24 hours, and deleted on disconnect. Connection credentials are encrypted in the WordPress database.</p>');
+            wp_add_privacy_policy_content('Google Business Profile Reviews for WordPress', '<p>This website may display public reviews from its authorized Google Business Profile, including reviewer names, profile photos, review text, dates and business replies. The server connects to Google APIs using administrator-authorized OAuth. The plugin does not send visitor analytics to Google. Displayed photos may load from Google when the reviews become visible. Business and review data are refreshed periodically, cached locally for up to 24 hours, and deleted on disconnect. Connection credentials are encrypted in the WordPress database.</p>');
         }
     }
     private static function form_start($op) {
@@ -114,7 +114,7 @@ final class AP_Local_Reviews {
         $notice = get_transient('aplr_notice_' . get_current_user_id());
         if ($notice) { delete_transient('aplr_notice_' . get_current_user_id()); echo '<div class="notice notice-' . ($notice['error'] ? 'error' : 'success') . '"><p>' . esc_html($notice['message']) . '</p></div>'; }
         $cache = self::cache();
-        echo '<div class="wrap"><h1>Google Business Reviews</h1><p>Connect one authorized Google Business Profile on any WordPress website. Each installation has its own credentials, selected business and appearance.</p>';
+        echo '<div class="wrap"><h1>Google Business Profile Reviews</h1><p>Connect one authorized Google Business Profile on any WordPress website. Each installation has its own credentials, selected business and appearance.</p>';
         echo '<p><strong>Connection: </strong>' . ($connected ? 'Google connected' : 'Not connected') . '</p>';
         if (!empty($s['selected']['title'])) { echo '<p><strong>Selected profile: </strong>' . esc_html($s['selected']['title']) . ' &mdash; ' . esc_html($s['selected']['website'] ?? '') . '</p>'; }
         if ($cache) { echo '<p>Last successful sync: ' . esc_html(wp_date('Y-m-d H:i T', $cache['fetched'])) . '. Cached data expires after 24 hours if Google cannot be reached.</p>'; }
@@ -360,7 +360,7 @@ final class AP_Local_Reviews {
         $n = max(0, min(5, (float) $number));
         return '<span class="aplr-stars" role="img" aria-label="' . esc_attr(number_format_i18n($n, 1) . ' out of 5 stars') . '">' . str_repeat('★', (int) round($n)) . str_repeat('☆', 5 - (int) round($n)) . '</span>';
     }
-    private static function empty_display() { return current_user_can('manage_options') ? '<p class="aplr-setup">Google reviews are not available yet. Check Settings → Google Business Reviews.</p>' : ''; }
+    private static function empty_display() { return current_user_can('manage_options') ? '<p class="aplr-setup">Google reviews are not available yet. Check Settings → Google Business Profile Reviews.</p>' : ''; }
     public static function rating_shortcode($atts = array()) { return self::shortcode(array_merge((array)$atts, array('compact' => 'yes'))); }
     public static function public_display() {
         nocache_headers(); header('Cache-Control: no-store, max-age=0');
