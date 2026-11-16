@@ -1,4 +1,4 @@
-# Local Business Reviews
+# Google Business Profile Reviews for WordPress
 
 WordPress plugin by **Ali Pourgholi** for displaying reviews and business information from a Google Business Profile you own or manage.
 
@@ -23,8 +23,8 @@ This is an independent project, not an official Google plugin. It requires your 
 1. Download this repository using **Code → Download ZIP** and extract it.
 2. Rename the extracted folder to `local-business-reviews`. Its root must contain `local-business-reviews.php`.
 3. Upload that folder to `wp-content/plugins/`, or ZIP that folder and install through **Plugins → Add New → Upload Plugin**.
-4. Activate **Local Business Reviews by Ali Pourgholi**.
-5. Open **Settings → Google Business Reviews**.
+4. Activate **Google Business Profile Reviews for WordPress**.
+5. Open **Settings → Google Business Profile Reviews**.
 
 No Composer or npm build is required. Use HTTPS and a PHP installation with OpenSSL AES-256-GCM. Your server must be able to reach Google's HTTPS endpoints.
 
@@ -93,7 +93,7 @@ Disconnect before uninstalling to revoke the Google grant. Deactivation stops sc
 
 For this publication, source review and JavaScript syntax validation were performed. PHP runtime checks, a fresh WordPress installation test and live Google OAuth/API testing were not performed. Test on staging with your own approved project before production use.
 
-The PHP/CSS/JavaScript files are unchanged from the supplied 1.3.5 package. Documentation has been corrected. Known limitation: the carousel script supports a Pause/Resume button, but the PHP template does not render that button in 1.3.5. Use manual carousel mode (`autoplay="no"`, the default) when a persistent pause control is required. This publication does not update any existing production website.
+The executable behavior matches the supplied 1.3.5 package; only user-facing plugin names have been renamed. Documentation has been corrected. Known limitation: the carousel script supports a Pause/Resume button, but the PHP template does not render that button in 1.3.5. Use manual carousel mode (`autoplay="no"`, the default) when a persistent pause control is required. This publication does not update any existing production website.
 
 Report reproducible non-sensitive bugs through GitHub Issues. Google API availability, eligibility and policies remain subject to Google. Review the [API policies](https://developers.google.com/my-business/content/policies), [terms](https://developers.google.com/my-business/content/terms) and [privacy policy](https://policies.google.com/privacy).
 
